@@ -1,73 +1,58 @@
-# Contributing Guidelines
+# Contributing
+ 
+## Code of Conduct
+ 
+All members of the project community must abide by the [Code of Conduct](https://github.com/anysure/.github/blob/master/CODE_OF_CONDUCT.md).
+Only by respecting each other we can develop a productive, collaborative community.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by filing a complaint at anysure@anylinq.com and/or contacting a project maintainer. 
+ 
+We appreciate your courtesy of avoiding political questions here. Issues which are not related to the project itself will be closed by our community managers. 
+ 
+## Engaging in Our Project
+ 
+We use GitHub to manage reviews of pull requests.
+ 
+* If you are a new contributor, see: [Steps to Contribute](#steps-to-contribute)
+ 
+* If you have a trivial fix or improvement, go ahead and create a pull request, addressing (with `@...`) a suitable maintainer of this repository in the description of the pull request.
+ 
+* If you plan to do something more involved, please reach out to us via Slack at praatmee.codefor.nl. This will avoid unnecessary work and surely give you and us a good deal of inspiration.
 
-The following is a set of guidelines for contributing to the AnySURE Ansible roles. We really appreciate that you are considering contributing!
+ 
+## Steps to Contribute
+ 
+Should you wish to work on an issue, please claim it first by commenting on the GitHub issue that you want to work on. This is to prevent duplicated efforts from other contributors on the same issue.
+ 
+If you have questions about one of the issues, please comment on them, and one of the maintainers will clarify.
+ 
+## Contributing Code or Documentation
+ 
+You are welcome to contribute code or documentation. Please read and sign the CLA before contributing. 
+ 
+## Pull Request Checklist
+ 
+* Branch from the master branch and, if needed, rebase to the current master branch before submitting your pull request. If it doesn't merge cleanly with master, you may be asked to rebase your changes.
+ 
+* Commits should be as small as possible while ensuring that each commit is correct independently (i.e., each commit should compile and pass tests).
 
-#### Table Of Contents
+* ensure you sign your commits (`git commit -S -m "commit commentary`), see also [Github signing commits](https://help.github.com/en/github/authenticating-to-github/signing-commits). 
 
-[Ask a Question](#ask-a-question)
-
-[Getting Started](#getting-started)
-
-[Contributing](#contributing)
-
-[Code Guidelines](#code-guidelines)
-*   [Git Guidelines](#git-guidelines)
-*   [Ansible Guidelines](#ansible-guidelines)
-
-[Code of Conduct](https://github.com/anysure/ansible.packages/blob/master/CODE_OF_CONDUCT.md)
-
-## Ask a Question
-
-Don't know how something works? Curious if the role can achieve your desired functionality? Please open an Issue on GitHub with the label `question`.
-
-## Getting Started
-
-Follow our [Installation Guide](https://github.com/anysure/anysure.packages/README.md#Installation) to install Ansible and Molecule and get ready to use our Ansible roles.
-
-### Project Structure
-
-*   The AnySURE Ansible roles are written in `yaml`.
-*   The project follows the standard [Ansible role directory structure](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
-    *   The main code is found in [`tasks/`](https://github.com/anysure/anysure.packages/blob/main/tasks/).
-    *   Variables can be found in [`defaults/main/`](https://github.com/anysure/anysure.packages/blob/main/defaults/main/).
-    *   "Constant" variables can be found in [`vars/main.yml`](https://github.com/anysure/anysure.packages/blob/main/vars/main.yml).
-    *   Configuration templates for NGINX can be found in [`templates/`](https://github.com/anysure/anysure.packages/blob/main/templates/).
-    *   [Molecule](https://molecule.readthedocs.io/) tests can be found in [`molecule/`](https://github.com/anysure/anysure.packages/blob/main/molecule/).
-    *   CI/CD is done via GitHub actions using the workflow files found in [`.github/workflows/`](https://github.com/anysure/anysure.packages/blob/main/.github/workflows/).
-
-## Contributing
-
-### Report a Bug
-
-To report a bug, open an issue on GitHub with the label `bug` using the available bug report issue template. Please ensure the issue has not already been reported.
-
-### Suggest an Enhancement
-
-To suggest an enhancement, please create an issue on GitHub with the label `enhancement` using the available feature issue template.
-
-### Open a Pull Request
-
-*   Fork the repo, create a branch, implement your changes, add any relevant Molecule tests, submit a PR when your changes are **tested** (using Molecule) and ready for review.
-*   Fill in [our pull request template](https://github.com/anysure/anysure.packages/blob/main/.github/pull_request_template.md).
-
-Note: if you’d like to implement a new feature, please consider creating a feature request issue first to start a discussion about the feature.
-
-## Code Guidelines
-
-### Ansible Guidelines
-
-*   Run `molecule lint` over your code to automatically resolve a lot of `yaml` and Ansible style issues.
-*   Run `molecule test` on your code before you submit a PR to catch any potential issues. If you are testing a specific molecule scenario, run `molecule test -s <scenario>`.
-*   Follow these guides on some good practices for Ansible:
-    *   <https://www.ansible.com/blog/ansible-best-practices-essentials>
-    *   <https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html>
-
-### Git Guidelines
-
-*   Keep a clean, concise and meaningful git commit history on your branch (within reason), rebasing locally and squashing before submitting a PR
-*   Follow the guidelines of writing a good commit message as described here <https://chris.beams.io/posts/git-commit/> and summarised in the next few points
-    *   In the subject line, use the present tense ("Add feature" not "Added feature")
-    *   In the subject line, use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-    *   Limit the subject line to 72 characters or less
-    *   Reference issues and pull requests liberally after the subject line
-    *   Add more detailed description in the body of the git message (`git commit -a` to give you more space and time in your text editor to write a good message instead of `git commit -am`)
+* Test your changes as thoroughly as possible before you commit them. Preferably, automate your test by unit/integration tests. If tested manually, provide information about the test scope in the PR description (e.g. “Test passed: Upgrade version from 0.42 to 0.42.23.”).
+ 
+* Create _Work In Progress [WIP]_ pull requests only if you need clarification or an explicit review before you can continue your work item.
+ 
+* Post review:
+  * If a review requires you to change your commit(s), please test the changes again.
+  * Amend the affected commit(s) and force push onto your branch.
+  * Set respective comments in your GitHub review to resolved.
+  * Create a general PR comment to notify the reviewers that your amendments are ready for another round of review.
+ 
+## Issues and Planning
+ 
+* We use GitHub issues to track bugs and enhancement requests. 
+ 
+* Please provide as much context as possible when you open an issue. The information you provide must be comprehensive enough to reproduce that issue for the assignee. Therefore, contributors should use but aren't restricted to the issue template provided by the project maintainers.
+ 
+* When creating an issue, try using one of our issue templates which already contain some guidelines on which content is expected to process the issue most efficiently. If no template applies, you can of course also create an issue from scratch.
+ 
+* Please apply one or more applicable labels to your issue so that all community members are able to cluster the issues better.
