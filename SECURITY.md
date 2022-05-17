@@ -1,10 +1,13 @@
 # Responsible Disclosure Statement and Security Policy
 
-The security of our systems is top priority. No matter how much effort we put into system security, there might be vulnerabilities present. If you discover a vulnerability, we would like to know about it so we can take steps to address it. We would like to ask you to help us protect our users and our systems.
+The security of our systems is top priority. No matter how much effort we put into system security, there might be vulnerabilities present. 
+If you discover a vulnerability, we would like to know about it so we can take steps to address it. 
+We would like to ask you to help us protect our users and our systems.
 
 ## Reporting a Vulnerability
 
 For all security related bugs, email anysure@anylinq.com
+
 Please do not publicly disclose these details without contacting us first. In return we will investigate all received vulnerability reports and, where needed, will take appropriate action as soon as is warranted. 
 In most cases this will be a workaround/mitigation first, followed by a fix and if required, a public disclosure.
 
@@ -34,5 +37,5 @@ In most cases this will be a workaround/mitigation first, followed by a fix and 
 
 We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication on the problem after it is resolved.
 
-This Responsible Disclosure policy is based on an example written by Floor Terra and the [Responsible Disclosure Guideline of the NCSC](https://english.ncsc.nl/publications/publications/2019/juni/01/coordinated-vulnerability-disclosure-the-guideline).
+*This Responsible Disclosure policy is based on an example written by Floor Terra and the [Responsible Disclosure Guideline of the NCSC](https://english.ncsc.nl/publications/publications/2019/juni/01/coordinated-vulnerability-disclosure-the-guideline).*
 
